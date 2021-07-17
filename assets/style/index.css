@@ -1,0 +1,112 @@
+@import "./colors.css";
+@import "./width-height.css";
+@import "./dashboardHeader.css";
+@import "./fontsize.css";
+@import "./dashboardNavigation.css";
+@import "./bestellingen.css";
+@import "./advertenties.css";
+
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.opacity_8 {
+  opacity: 0.8;
+}
+
+/* common line_height */
+.line_height_50 {
+  line-height: 50px !important;
+}
+.line_height_25 {
+  line-height: 25px !important;
+}
+.line_height_28 {
+  line-height: 28px !important;
+}
+
+/* border-radius */
+.br_radius6 {
+  border-radius: 6px;
+}
+.br_radius10 {
+  border-radius: 10px;
+}
+
+/* common hr line */
+.common_hr_line{
+  background-color: #fff;
+  opacity: 0.3;
+  height: 1px;
+  width: 100%;
+}
+/* common checkbox */
+.checkbox_container {
+  height: fit-content;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox_container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox_container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  height: 21px;
+  width: 22px;
+  background-color: #1e2a31;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox_container:hover input ~ .checkmark {
+  background-color: #ffd500;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox_container input:checked ~ .checkmark {
+  background-color: #ffd500;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkbox_container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox_container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 7px;
+  height: 13px;
+  border: 1px solid #212e37;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+.checkbox_container .checkbox_title {
+  font-size: 14px;
+  color: #9193a3;
+}

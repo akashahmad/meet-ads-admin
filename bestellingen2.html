@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/style/index.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="flex w-full bg_dashboard_color destellingen2">
+      <!-- left side navigation-->
+      <div class="w-2/12 hidden lg:block xl:block">
+        <div class="w-full dashboard_sidenav_container py-6 h-full">
+          <!-- logo -->
+          <div class="px-5">
+            <img src="./assets/images/logo.png" alt="logo" class="h_80px" />
+          </div>
+          <div class="w-full flex flex-col py-12 navigation_container px-6">
+            <!-- dashboard -->
+            <div class="py-3">
+              <div class="inActive_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/pie-chart-finances@3x.png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/pie-chart-finances.png"
+                  class="inActive_img h_18px"
+                />
+                <h6 class="m-0 px-3 text-md pt-1">Dashboard</h6>
+              </div>
+            </div>
+            <!-- Bestellingen -->
+            <div class="py-3">
+              <div class="active_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/shopping-list@3x.png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/shopping-list@3x(1).png"
+                  class="inActive_img h_18px"
+                />
+                <a href="index.html">
+                  <h6 class="m-0 px-3 text-md pt-1">Bestellingen</h6>
+                </a>
+              </div>
+            </div>
+            <!-- Advertenties -->
+            <div class="py-3">
+              <div class="inActive_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/settings_black_24dp@3x1.png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/settings_black_24dp@3x.png"
+                  class="inActive_img h_18px"
+                />
+                <a href="advertenties.html">
+                  <h6 class="m-0 px-3 text-md pt-1">Advertenties</h6>
+                </a>
+              </div>
+            </div>
+            <!-- Bedrijf  -->
+            <div class="py-3">
+              <div class="inActive_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/business-and-trade@3x(1).png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/business-and-trade@3x.png"
+                  class="inActive_img h_18px"
+                />
+                <h6 class="m-0 px-3 text-md pt-1">Bedrijf</h6>
+              </div>
+            </div>
+            <!-- Webshop  -->
+            <div class="py-3">
+              <div class="inActive_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/signal.png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/signal@3x.png"
+                  class="inActive_img h_18px"
+                />
+                <h6 class="m-0 px-3 text-md pt-1">Webshop</h6>
+              </div>
+            </div>
+            <!-- Klanten  -->
+            <div class="py-3">
+              <div class="inActive_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/customer.png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/customer@3x.png"
+                  class="inActive_img h_18px"
+                />
+                <h6 class="m-0 px-3 text-md pt-1">Klanten</h6>
+              </div>
+            </div>
+            <!-- Facturen  -->
+            <div class="py-3">
+              <div class="inActive_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/invoices.png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/invoices@3x.png"
+                  class="inActive_img h_18px"
+                />
+                <h6 class="m-0 px-3 text-md pt-1">Facturen</h6>
+              </div>
+            </div>
+            <!-- Transactie  -->
+            <div class="py-3">
+              <div class="inActive_link flex items-center pl-4 pr-6 py-2">
+                <img
+                  src="./assets/images/transaction.png"
+                  class="active_img h_18px"
+                />
+                <img
+                  src="./assets/images/transaction@3x.png"
+                  class="inActive_img h_18px"
+                />
+                <h6 class="m-0 px-3 text-md pt-1">Transactie</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- right side page content -->
+      <div class="w-full lg:w-10/12 xl:w-10/12 h-full">
+        <!-- header -->
+        <div>
+          <div
+            class="
+              w-full
+              flex
+              justify-between
+              items-center
+              container
+              mx-auto
+              py-3
+              px-6
+              dashboard_header_container
+            "
+          >
+            <!-- left side -->
+            <div class="w-5/12">
+              <h4 class="text_darkGray text-2xl font-bold">
+                Bestellingen <span class="text-white">/</span>
+              </h4>
+            </div>
+            <!-- right side -->
+            <div class="w-6/12 right_side_container">
+              <div class="hidden lg:block xl:block">
+                <ul
+                  class="
+                    flex
+                    justify-end
+                    w-full
+                    list-none
+                    text_darkblue
+                    items-center
+                    font-medium
+                  "
+                >
+                  <li class="px-1">
+                    <img
+                      src="./assets/images/ben-dellot@3x.png"
+                      class="h_30px"
+                      alt=""
+                    />
+                  </li>
+                  <li class="px-1">
+                    <p class="text-">John Doe</p>
+                  </li>
+                  <li class="px-1">
+                    <img
+                      src="./assets/images/Polygon26@3x.png"
+                      class="h_8px"
+                      alt=""
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="block lg:hidden xl:hidden">
+                <div class="w-full flex justify-end px-2">
+                  <span style="font-size: 30px; cursor: pointer">&#9776;</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content -->
+        <div
+          class="
+            container
+            mx-auto
+            px-6
+            py-6
+            flex flex-col
+            lg:flex-row
+            xl:flex-row
+            content_below_header_container
+          "
+        >
+          <!-- left side -->
+          <div class="w-full lg:w-4/12">
+            <div
+              class="
+                heading_button
+                flex flex-col
+                lg:flex-row
+                xl:flex-row
+                items-center
+              "
+            >
+              <h4 class="font-bold text-white text-lg">Bestelling</h4>
+              <div class="w-full lg:w-5/12 xl:w-5/12 py-2 lg:py-0 xl:py-0 px-4">
+                <button class="text-center w-full px-5 py-1 rounded-lg">
+                  Betaald
+                </button>
+              </div>
+            </div>
+            <div class="text-center lg:text-left xl:text-left">
+              <h4 class="text_yellow py-1 text-lg">odqk9t49</h4>
+              <h4 class="text_darkGray py-1 text-sm">Mollie ID tr_wejkbswr</h4>
+              <h4 class="text_darkGray py-1 text-sm">
+                Geplaast op 09 July, 2021 18:49
+              </h4>
+            </div>
+          </div>
+          <!-- right side -->
+          <div
+            class="
+              w-full
+              lg:w-8/12
+              flex flex-wrap
+              justify-center
+              lg:justify-end
+              xl:justify-end
+            "
+          >
+            <div
+              class="
+                bg_component_color
+                hover:bg-yellow-400
+                cursor-pointer
+                rounded-lg
+                px-5
+                py-2
+                my-2
+                lg:my-0
+                xl:my-0
+                h_fit_content
+                mr-4
+              "
+            >
+              <h4 class="text-center text-base text-white opacity_8">Terug</h4>
+            </div>
+            <div
+              class="
+                bg_component_color
+                hover:bg-yellow-400
+                cursor-pointer
+                rounded-lg
+                px-5
+                my-2
+                lg:my-0
+                xl:my-0
+                py-2
+                h_fit_content
+                mr-4
+              "
+            >
+              <h4 class="text-center text-base text-white opacity_8">
+                Factuur
+              </h4>
+            </div>
+            <div
+              class="
+                bg_component_color
+                hover:bg-yellow-400
+                cursor-pointer
+                rounded-lg
+                px-5
+                my-2
+                lg:my-0
+                xl:my-0
+                py-2
+                h_fit_content
+                mr-4
+              "
+            >
+              <h4 class="text-center text-base text-white opacity_8">
+                Verzendlabel
+              </h4>
+            </div>
+            <div
+              class="
+                bg_component_color
+                hover:bg-yellow-400
+                cursor-pointer
+                rounded-lg
+                px-5
+                my-2
+                lg:my-0
+                xl:my-0
+                py-2
+                h_fit_content
+                mr-4
+              "
+            >
+              <h4 class="text-center text-base text-white opacity_8">
+                Wijzigingen opslaan
+              </h4>
+            </div>
+            <div
+              class="
+                bg_yellow
+                cursor-pointer
+                hover:bg-yellow-400
+                cursor-pointer
+                rounded-lg
+                px-3
+                my-2
+                lg:my-0
+                xl:my-0
+                py-2
+                h_fit_content
+                mr-4
+              "
+            >
+              <h4 class="text-center text-base text-white opacity_8">
+                <img
+                  src="./assets/images/printing@3x.png"
+                  class="h_21px"
+                  alt=""
+                />
+              </h4>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto px-6 py-6">
+          <div class="heading_button text-center lg:text-left xl:text-left">
+            <h4 class="font-bold text-white text-base">Persoon</h4>
+          </div>
+          <div
+            class="
+              flex flex-col
+              lg:flex-row
+              xl:flex-row
+              content_below_header_container
+            "
+          >
+            <!-- left side -->
+            <div class="w-full lg:w-9/12">
+              <div
+                class="
+                  flex flex-wrap
+                  justify-center
+                  lg:justify-start
+                  xl:justify-start
+                  py-3
+                "
+              >
+                <div class="pr-3 flex">
+                  <h4 class="text-white py-1 text-base opacity_8">Voornaam:</h4>
+                  <h4 class="text_darkGray py-1 px-1 text-base">Erik</h4>
+                </div>
+                <div class="pr-3 flex">
+                  <h4 class="text-white py-1 text-base opacity_8">
+                    Achternaam:
+                  </h4>
+                  <h4 class="text_darkGray py-1 px-1 text-base">Driessen</h4>
+                </div>
+                <div class="pr-3 flex">
+                  <h4 class="text-white py-1 text-base opacity_8">
+                    Telefoonummer:
+                  </h4>
+                  <h4 class="text_darkGray py-1 px-1 text-base">0622263981</h4>
+                </div>
+                <div class="pr-3 flex">
+                  <h4 class="text-white py-1 text-base opacity_8">Email ID:</h4>
+                  <h4 class="text_darkGray py-1 px-1 text-base">
+                    E.l.m.driessen@gmail.com
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <!-- right side -->
+            <div
+              class="
+                w-full
+                py-2
+                lg:py-0
+                xl:py-0
+                flex
+                justify-center
+                lg:justify-end
+                xl:justify-end
+                lg:w-3/12
+                xl:w-3/12
+              "
+            >
+              <div class="flex items-center">
+                <h4 class="text-white py-1 text-base opacity_8">
+                  Pakket Status:
+                </h4>
+                <h4 class="text_darkGray py-1 px-1 text-base">Verzonden</h4>
+                <div>
+                  <img
+                    src="./assets/images/Polygon26@3x.png"
+                    class="h_8px"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="
+            flex
+            justify-center
+            lg:flex-row lg:justify-between
+            flex-col
+            py-3
+            px-6
+            container
+            mx-auto
+            Bestelling_section3_container
+          "
+        >
+          <!-- 1st -->
+          <div
+            class="
+              bg_component_color
+              px-3
+              py-3
+              my-2
+              lg:my-0
+              xl:my-0
+              rounded-lg
+              common_box_width
+            "
+          >
+            <div class="flex justify-center lg:justify-start items-center">
+              <div>
+                <img
+                  src="./assets/images/delivery(1)@3x.png"
+                  class="h_30px pt-1"
+                />
+              </div>
+              <div>
+                <h4 class="text-white opacity_8 m-0 fs_15px pl-3 font-bold">
+                  verzendadres
+                </h4>
+              </div>
+            </div>
+            <div class="pt-3 text-center lg:text-left">
+              <h4 class="text-sm text_darkGray">odalaan 54</h4>
+              <h4 class="text-sm py-1 text_darkGray">6129HZ Urmond</h4>
+              <h4 class="text-sm text_darkGray">Nederland</h4>
+            </div>
+          </div>
+          <!-- 2nd -->
+          <div
+            class="
+              bg_component_color
+              px-3
+              my-2
+              lg:my-0
+              xl:my-0
+              py-3
+              rounded-lg
+              common_box_width
+            "
+          >
+            <div class="flex items-center justify-center lg:justify-start">
+              <div>
+                <img src="./assets/images/address@3x.png" class="h_30px pt-1" />
+              </div>
+              <div>
+                <h4 class="text-white opacity_8 m-0 fs_15px pl-3 font-bold">
+                  Factuuradres
+                </h4>
+              </div>
+            </div>
+            <div class="pt-3 text-center lg:text-left">
+              <h4 class="text-sm text_darkGray">odalaan 54</h4>
+              <h4 class="text-sm py-1 text_darkGray">6129HZ Urmond</h4>
+              <h4 class="text-sm text_darkGray">Nederland</h4>
+            </div>
+          </div>
+          <!-- 3rd -->
+          <div
+            class="
+              bg_component_color
+              px-3
+              py-3
+              my-2
+              lg:my-0
+              xl:my-0
+              rounded-lg
+              common_box_width
+            "
+          >
+            <div class="flex items-center justify-center lg:justify-start">
+              <div>
+                <img src="./assets/images/share@3x.png" class="h_30px pt-1" />
+              </div>
+              <div>
+                <h4 class="text-white opacity_8 m-0 fs_15px pl-3 font-bold">
+                  verzendmethode
+                </h4>
+              </div>
+            </div>
+            <div class="pt-3 text-center lg:text-left">
+              <h4 class="text-sm text_darkGray">odalaan 54</h4>
+              <h4 class="text-sm py-1 text_darkGray">6129HZ Urmond</h4>
+              <h4 class="text-sm text_darkGray">Nederland</h4>
+            </div>
+          </div>
+          <!-- 4th -->
+          <div
+            class="
+              bg_component_color
+              px-3
+              py-3
+              my-2
+              lg:my-0
+              xl:my-0
+              rounded-lg
+              common_box_width
+            "
+          >
+            <div class="flex items-center justify-center lg:justify-start">
+              <div>
+                <img src="./assets/images/notes@3x.png" class="h_30px pt-1" />
+              </div>
+              <div>
+                <h4 class="text-white opacity_8 m-0 fs_15px pl-3 font-bold">
+                  verzendmethode
+                </h4>
+              </div>
+            </div>
+            <div class="pt-3 text-center lg:text-left">
+              <h4 class="text-sm text_darkGray">odalaan 54</h4>
+              <h4 class="text-sm py-1 text_darkGray">6129HZ Urmond</h4>
+              <h4 class="text-sm text_darkGray">Nederland</h4>
+            </div>
+          </div>
+          <!-- 5th -->
+          <div
+            class="
+              bg_component_color
+              px-3
+              py-3
+              my-2
+              lg:my-0
+              xl:my-0
+              rounded-lg
+              common_box_width
+            "
+          >
+            <div class="flex items-center justify-center lg:justify-start">
+              <div>
+                <img src="./assets/images/notes@3x.png" class="h_30px pt-1" />
+              </div>
+              <div>
+                <h4 class="text-white opacity_8 m-0 fs_15px pl-3 font-bold">
+                  verzendmethode
+                </h4>
+              </div>
+            </div>
+            <div class="pt-3 text-center lg:text-left">
+              <h4 class="text-sm text_darkGray">odalaan 54</h4>
+              <h4 class="text-sm py-1 text_darkGray">6129HZ Urmond</h4>
+              <h4 class="text-sm text_darkGray">Nederland</h4>
+            </div>
+          </div>
+        </div>
+        <div class="container mx-auto px-6 py-3">
+          <div
+            class="
+              bg_component_color
+              py-3
+              my-2
+              lg:my-0
+              xl:my-0
+              rounded-lg
+              w-full
+            "
+          >
+            <div class="flex justify-center lg:justify-start items-center px-3">
+              <div>
+                <img
+                  src="./assets/images/delivery(1)@3x.png"
+                  class="h_30px pt-1"
+                />
+              </div>
+              <div>
+                <h4 class="text-white opacity_8 m-0 fs_15px pl-3">
+                  verzendadres
+                </h4>
+              </div>
+            </div>
+            <div class="py-3">
+              <hr class="common_hr_line" />
+            </div>
+            <div class="px-3">
+              <div class="flex flex-col lg:flex-row lg:justify-between">
+                <p class="text-white fs_15px py-1 text-center lg:text-left">
+                  Pakketstatus gewijadjk van
+                  <span class="text_yellow">In afwatching</span> naar<span
+                    class="text_yellow"
+                  >
+                    Verzonden</span
+                  >
+                  door infor@otosan.nl
+                </p>
+                <div>
+                  <p class="text_yellow fs_15px py-1 text-center lg:text-left">
+                    10 July 2021 | 12:20
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col lg:flex-row lg:justify-between">
+                <p class="text-white fs_15px py-1 text-center lg:text-left">
+                  Pakketstatus gewijadjk van
+                  <span class="text_yellow">In afwatching</span> naar<span
+                    class="text_yellow"
+                  >
+                    Verzonden</span
+                  >
+                  door infor@otosan.nl
+                </p>
+                <div>
+                  <p class="text_yellow fs_15px py-1 text-center lg:text-left">
+                    10 July 2021 | 12:20
+                  </p>
+                </div>
+              </div>
+              <div class="flex flex-col lg:flex-row lg:justify-between">
+                <p class="text-white fs_15px py-1 text-center lg:text-left">
+                  Pakketstatus gewijadjk van
+                  <span class="text_yellow">In afwatching</span> naar<span
+                    class="text_yellow"
+                  >
+                    Verzonden</span
+                  >
+                  door infor@otosan.nl
+                </p>
+                <div>
+                  <p class="text_yellow fs_15px py-1 text-center lg:text-left">
+                    10 July 2021 | 12:20
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pt-12 pb-5 px-6 container mx-auto">
+          <div class="common_hr_line"></div>
+        </div>
+        <div class="container mx-auto px-6">
+          <h4 class="font-bold text-white text-lg">Producten</h4>
+          <h4 class="text_darkGray py-1 text-sm">Mollie ID tr_wejkbswr</h4>
+        </div>
+        <!-- table -->
+        <div class="table_container container mx-auto px-6 py-3">
+          <div
+            class="
+              br_radius6
+              table_responsive_width
+              bg_component_color
+              px-3
+              py-3
+            "
+          >
+            <!-- header -->
+            <div class="w-full table_header br_radius10 py-3 px-3">
+              <ul class="list-none flex justify-between">
+                <li class="w-1/12">S.No</li>
+                <li class="w-2/12">Afbeelding</li>
+                <li class="w-3/12">product beschrijving</li>
+                <li class="w-3/12">Onderdeelnummer</li>
+                <li class="w-2/12">Aantal</li>
+                <li class="w-1/12">Prijs</li>
+              </ul>
+            </div>
+            <!-- body -->
+            <div class="w-full table_body br_radius10 py-3">
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+              <ul class="list-none flex justify-between data pt-3">
+                <li class="w-1/12 text-left px-5">1</li>
+                <li class="w-2/12 flex px-1">
+                  <img
+                    src="./assets/images/NoPath - Copy(5)@3x.png"
+                    alt=""
+                    class="h_70px"
+                  />
+                </li>
+                <li class="w-3/12 px-1">
+                  VW Golf 7 GTi Facelift Gasklephuis 06F133062T
+                </li>
+                <li class="w-3/12">06F133062T</li>
+                <li class="w-2/12">1 st.</li>
+                <li class="w-1/12">€ ,99</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
